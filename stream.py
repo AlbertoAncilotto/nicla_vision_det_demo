@@ -52,7 +52,7 @@ while True:
         results = object_model.run(None, ort_inputs)[0]
         postprocessor.plot_boxes(results, img)
         annotated_frame = cv2.resize(img, (640, 480))
-        cv2.imshow('Latest Frame', annotated_frame)
+        cv2.imshow('Livestream', annotated_frame)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
